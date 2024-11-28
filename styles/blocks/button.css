@@ -1,0 +1,136 @@
+[class^="button"] {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--branding-200);
+    padding-left: 24px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+    font-family: var(--font-plus-jakarta-sans);
+    border-radius: 96px;
+    color: var(--neutral-900);
+    transition: all 0.2s;
+    gap: 24px;
+}
+
+[class^="button"]:hover {
+    background: var(--branding-300);
+}
+
+[class^="button"][disabled],
+[class^="button"].disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+[class^="button"] svg {
+    stroke: var(--beige-200);
+    width: 24px;
+    height: 24px;
+}
+
+[class^="button"]:hover svg {
+    stroke: var(--black);
+}
+
+.button-stroke {
+    padding: 16px 24px;
+    background: none;
+    border: none;
+    box-shadow: 0 0 0 1.5px var(--branding-200) inset;
+    color: var(--branding-200);
+}
+
+.button-stroke svg {
+    stroke: var(--neutral-900);
+}
+
+.button-stroke:hover,
+.button-stroke:active {
+    background: var(--beige-200);
+    box-shadow: 0 0 0 1.5px var(--beige-200) inset;
+    color: var(--neutral-900);
+}
+
+.button-stroke-light {
+    padding: 16px 24px;
+    background: none;
+    border: none;
+    box-shadow: 0 0 0 1.5px var(--neutral-900) inset;
+    color: var(--neutral-900);
+}
+
+.button-stroke-light:hover {
+    background: var(--neutral-900);
+    color: var(--beige-200);
+}
+
+.button-black {
+    border: none;
+    background: var(--slate-950);
+}
+
+.button-black:hover {
+    background: var(--slate-900);
+}
+
+.button-white {
+    background: var(--white);
+    color: var(--slate-900);
+    border: none;
+}
+
+.button-white svg {
+    stroke: var(--slate-900);
+}
+
+.button-white:hover {
+    background: var(--slate-100);
+}
+
+.button-small {
+    height: 48px;
+    min-height: 48px;
+    padding: 0 24px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.08px;
+}
+
+.button-circle-stroke {
+    min-height: auto;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.2s;
+    border: 2px solid var(--slate-200);
+    cursor: pointer;
+}
+
+.button-circle-stroke svg {
+    stroke: var(--black);
+}
+
+.button-circle-stroke:hover {
+    background: var(--white);
+    border-color: var(--black);
+}
+
+.button-circle-stroke:hover svg {
+    stroke: var(--black);
+}
+
+.button-circle-stroke.button-small {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+}

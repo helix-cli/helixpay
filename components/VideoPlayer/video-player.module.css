@@ -1,0 +1,32 @@
+.video_wrapper {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    width: 60%;
+    padding-top: 33.75%;
+}
+
+.video_wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--branding-200);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .video_wrapper {
+        width: 80%;
+        padding-top: 45%;
+    }
+}
+
+@media (max-width: 430px) {
+    .video_wrapper {
+        width: 80%;
+        padding-top: 50.625%;
+    }
+}

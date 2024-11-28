@@ -1,0 +1,48 @@
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.ratings {
+    display: flex;
+    gap: 8px;
+}
+
+.rating svg {
+    fill: var(--neutral-600);
+    width: 18px;
+    height: 18px;
+}
+
+.ratings .active svg {
+    fill: var(--branding-500);
+}
+
+.comment {
+    text-align: center;
+}
+
+.reviewer {
+    font-weight: 700;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .reviews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,19 @@
+.marquee {
+    margin-top: 48px;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 48px;
+    border-top: 0.5px solid var(--neutral-600);
+    border-bottom: 0.5px solid var(--neutral-600);
+}
+
+.marquee_text {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.marquee_text span {
+    color: var(--branding-200);
+}

@@ -1,0 +1,39 @@
+.awards {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 48px;
+}
+
+.award {
+    padding-bottom: 48px;
+    border-bottom: 0.5px solid var(--neutral-600);
+}
+
+.award_title {
+    font-weight: 600;
+}
+
+.award_description {
+    margin-top: 8px;
+    color: var(--neutral-400);
+}
+
+@media (max-width: 768px) {
+    .awards {
+        margin-top: 48px;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: -0.54px;
+    }
+}
+
+@media (max-width: 480px) {
+    .awards {
+        grid-template-columns: auto;
+    }
+}

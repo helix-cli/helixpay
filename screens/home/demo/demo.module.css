@@ -1,0 +1,72 @@
+.section {
+    overflow: hidden;
+}
+
+.swiper {
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.swiper_slide {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.indicators_content {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.indicators {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--neutral-600);
+}
+
+.indicator.active {
+    background-color: var(--branding-200);
+}
+
+.indicator_btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    stroke: 1px solid var(--branding-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicator_btn svg {
+    stroke: var(--branding-200);
+}
+
+.indicator_btn.active svg {
+    stroke: var(--neutral-600);
+}
+
+@media (max-width: 768px) {
+    .swiper {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper {
+        width: 300px;
+        height: 300px;
+    }
+}

@@ -1,0 +1,96 @@
+.title {
+    text-align: center;
+}
+
+.awards {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.award {
+    padding: 48px;
+    border-bottom: 0.5px solid var(--neutral-600);
+    border-right: 0.5px solid var(--neutral-600);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.award:nth-child(3n) {
+    border-right: none;
+}
+
+.award:nth-last-child(-n + 3) {
+    border-bottom: none;
+}
+
+.award_icon {
+    width: 44px;
+    height: 44px;
+    background-color: var(--beige-200);
+    box-shadow: 0 0 0 4px #323232;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.award_icon svg {
+    stroke: var(--neutral-900);
+}
+
+.award_title {
+    margin-top: 24px;
+    font-weight: 600;
+}
+
+.award_description {
+    margin-top: 8px;
+    color: var(--neutral-400);
+}
+
+@media (max-width: 768px) {
+    .awards {
+        margin-top: 48px;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .award:nth-child(2n) {
+        border-right: none;
+    }
+
+    .award:nth-child(3):not(:last-child) {
+        border-right: 0.5px solid var(--neutral-600);
+    }
+
+    .award:nth-last-child(-n + 2) {
+        border-bottom: none;
+    }
+
+    .award:nth-child(4) {
+        border-bottom: 0.5px solid var(--neutral-600);
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: -0.54px;
+    }
+}
+
+@media (max-width: 480px) {
+    .awards {
+        grid-template-columns: auto;
+    }
+
+    .award {
+        border-right: none !important;
+    }
+
+    .award:nth-last-child(2) {
+        border-bottom: 0.5px solid var(--neutral-600) !important;
+    }
+}

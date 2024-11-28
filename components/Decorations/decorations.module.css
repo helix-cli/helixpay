@@ -1,0 +1,9 @@
+.decorations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.decorations_title {
+    color: var(--neutral-500);
+}

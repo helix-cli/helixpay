@@ -1,0 +1,22 @@
+.specs {
+    margin-top: 48px;
+}
+
+.spec {
+    padding: 48px 0;
+    border-bottom: 0.5px solid var(--neutral-600);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.spec:nth-child(1) {
+    border-top: 0.5px solid var(--neutral-600);
+}
+
+.spec_title {
+    font-weight: 600;
+}
+
+.spec_subtitle {
+    color: var(--neutral-400);
+}
