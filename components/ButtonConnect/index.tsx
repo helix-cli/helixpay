@@ -61,14 +61,15 @@ const ButtonConnect = () => {
                             }
                             if (chain.unsupported) {
                                 return (
-                                    <button onClick={openChainModal} className={cn("button")}>
+                                    <button onClick={openChainModal} className={cn("button", styles.button)}>
                                         Wrong network
                                     </button>
                                 );
                             }
                             return (
-                                <div style={{ display: 'flex', gap: 12 }}>
+                                <div style={{ display: 'flex' }}>
                                     <button
+                                        className={cn("button", styles.buttonChain)}
                                         onClick={openChainModal}
                                         style={{ display: 'flex', alignItems: 'center' }}
                                         type="button"
@@ -76,26 +77,24 @@ const ButtonConnect = () => {
                                         {chain.hasIcon && (
                                             <div
                                                 style={{
-                                                    background: chain.iconBackground,
-                                                    width: 12,
-                                                    height: 12,
+                                                    width: 24,
+                                                    height: 24,
                                                     borderRadius: 999,
-                                                    overflow: 'hidden',
-                                                    marginRight: 4,
+                                                    alignSelf: 'center',
                                                 }}
                                             >
                                                 {chain.iconUrl && (
                                                     <img
                                                         alt={chain.name ?? 'Chain icon'}
                                                         src={chain.iconUrl}
-                                                        style={{ width: 12, height: 12 }}
+                                                        style={{ width: 24, height: 24 }}
                                                     />
                                                 )}
                                             </div>
                                         )}
-                                        {chain.name}
+                                        {/*{chain.name}*/}
                                     </button>
-                                    <button onClick={openAccountModal} type="button">
+                                    <button onClick={openAccountModal} type="button" className={cn("button", styles.button)}>
                                         {account.displayName}
                                         {account.displayBalance
                                             ? ` (${account.displayBalance})`

@@ -12,6 +12,11 @@
     align-items: center;
 }
 
+.buttonChain {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 .dropdown_btn {
     position: relative;
     display: flex;
