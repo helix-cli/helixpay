@@ -20,7 +20,7 @@ export default function Providers({ children }: Props) {
                     theme={darkTheme({
                         accentColor: "#0E76FD",
                         accentColorForeground: "white",
-                        borderRadius: "large",
+                        borderRadius: "none",
                         fontStack: "system",
                         overlayBlur: "small",
                     })}

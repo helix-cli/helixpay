@@ -59,16 +59,16 @@ const Header = () => {
 
           <ButtonConnect />
 
-          <button
-            className={cn("label-small", styles.dropdown_btn, {
-              [styles.dropdown_btn_open]: dropdownOpen,
-            })}
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            Account
-            <span>
-              <Add />
-            </span>
+          {/*<button*/}
+          {/*  className={cn("label-small", styles.dropdown_btn, {*/}
+          {/*    [styles.dropdown_btn_open]: dropdownOpen,*/}
+          {/*  })}*/}
+          {/*  onClick={() => setDropdownOpen(!dropdownOpen)}*/}
+          {/*>*/}
+          {/*  Account*/}
+          {/*  <span>*/}
+          {/*    <Add />*/}
+          {/*  </span>*/}
             {/*{dropdownOpen && (*/}
             {/*  <div*/}
             {/*    className={cn(styles.dropdown_menu, {*/}
@@ -89,7 +89,7 @@ const Header = () => {
             {/*    </Link>*/}
             {/*  </div>*/}
             {/*)}*/}
-          </button>
+          {/*</button>*/}
         </div>
 
         <button

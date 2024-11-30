@@ -5,10 +5,13 @@ import ArrowRight from "@/components/Icons/ArrowRight";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import styles from './buttonconnect.module.css';
 import cn from "classnames";
+import Add from "@/components/Icons/Add";
+import React from "react";
 
 const ButtonConnect = () => {
     return (
-        <ConnectButton.Custom>
+        <ConnectButton.Custom
+        >
             {({
                   account,
                   chain,
@@ -41,9 +44,18 @@ const ButtonConnect = () => {
                         {(() => {
                             if (!connected) {
                                 return (
-                                    <button className={cn("button", styles.button)} onClick={openConnectModal}>
-                                        {/*<p className={cn(styles.text)}>Connect Wallet</p>*/}
+                                    // <button className={cn("button", styles.button)} onClick={openConnectModal}>
+                                    //     {/*<p className={cn(styles.text)}>Connect Wallet</p>*/}
+                                    //     Connect Wallet
+                                    // </button>
+                                    <button
+                                        className={cn("label-small", styles.dropdown_btn)}
+                                        onClick={openConnectModal}
+                                    >
                                         Connect Wallet
+                                        <span>
+                                            <Add />
+                                        </span>
                                     </button>
                                 );
                             }
