@@ -13,6 +13,31 @@
     z-index: 3;
 }
 
+.logo {
+    z-index: 1;
+    font-size: 30px;
+    line-height: 56px;
+    letter-spacing: -0.64px;
+    text-align: center;
+    -webkit-mask-image: linear-gradient(
+            -25deg,
+            rgba(19, 19, 19, 0.6) 30%,
+            #000 50%,
+            rgba(19, 19, 19, 0.6) 70%
+    );
+    -webkit-mask-size: 200%;
+    animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
 .container {
     display: flex;
     align-items: center;

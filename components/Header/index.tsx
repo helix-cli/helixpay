@@ -7,6 +7,7 @@ import Add from "../Icons/Add";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ButtonConnect  from "@/components/ButtonConnect";
+import {UserRound} from "lucide-react";
 
 const nav_links = [
   {
@@ -36,7 +37,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={cn("container", styles.container)}>
-        <Link href="/" className={cn("heading-6", styles.logo_name)}>
+        <Link href="/" className={cn("hero", styles.logo)}>
           HelixPay.
         </Link>
 
@@ -59,37 +60,35 @@ const Header = () => {
 
           <ButtonConnect />
 
-          {/*<button*/}
-          {/*  className={cn("label-small", styles.dropdown_btn, {*/}
-          {/*    [styles.dropdown_btn_open]: dropdownOpen,*/}
-          {/*  })}*/}
-          {/*  onClick={() => setDropdownOpen(!dropdownOpen)}*/}
-          {/*>*/}
-          {/*  Account*/}
-          {/*  <span>*/}
-          {/*    <Add />*/}
-          {/*  </span>*/}
-            {/*{dropdownOpen && (*/}
-            {/*  <div*/}
-            {/*    className={cn(styles.dropdown_menu, {*/}
-            {/*      [styles.dropdown_menu_open]: dropdownOpen,*/}
-            {/*    })}*/}
-            {/*  >*/}
-            {/*    <Link*/}
-            {/*      href="/about"*/}
-            {/*      className={cn("label-small", styles.dropdown_link)}*/}
-            {/*    >*/}
-            {/*      About*/}
-            {/*    </Link>*/}
-            {/*    <Link*/}
-            {/*      href="/contact"*/}
-            {/*      className={cn("label-small", styles.dropdown_link)}*/}
-            {/*    >*/}
-            {/*      Contact*/}
-            {/*    </Link>*/}
-            {/*  </div>*/}
-            {/*)}*/}
-          {/*</button>*/}
+          <button
+            className={cn("label-small", styles.dropdown_btn)}
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+          >
+            {/*Account*/}
+            <span>
+              <UserRound className="w-4 h-4"/>
+            </span>
+            {dropdownOpen && (
+              <div
+                className={cn(styles.dropdown_menu, {
+                  [styles.dropdown_menu_open]: dropdownOpen,
+                })}
+              >
+                <Link
+                  href="/about"
+                  className={cn("label-small", styles.dropdown_link)}
+                >
+                  About
+                </Link>
+                <Link
+                  href="/contact"
+                  className={cn("label-small", styles.dropdown_link)}
+                >
+                  Contact
+                </Link>
+              </div>
+            )}
+          </button>
         </div>
 
         <button

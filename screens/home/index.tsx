@@ -16,6 +16,7 @@ import Marquee from "./marquee";
 const HomeScreen = () => {
   return (
     <Layout>
+        <div></div>
       {/*<Hero />*/}
       {/*<FeaturedProducts />*/}
       {/*<Reviews />*/}
@@ -28,7 +29,7 @@ const HomeScreen = () => {
       {/*<Demo />*/}
       {/*<Specs />*/}
       {/*<Benefits />*/}
-      <CTA />
+      {/*<CTA />*/}
     </Layout>
   );
 };
