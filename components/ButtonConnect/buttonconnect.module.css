@@ -1,0 +1,13 @@
+.button {
+    margin-top: 0px;
+}
+
+.button .circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--neutral-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
