@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Balance from "@/screens/home/balance";
 import Hero from "./hero";
 import FeaturedProducts from "./featured-products";
 import Reviews from "./reviews";
@@ -16,7 +17,7 @@ import Marquee from "./marquee";
 const HomeScreen = () => {
   return (
     <Layout>
-        <div></div>
+        <Balance/>
       {/*<Hero />*/}
       {/*<FeaturedProducts />*/}
       {/*<Reviews />*/}
