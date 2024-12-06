@@ -7,7 +7,7 @@
     margin-bottom: 64px;
     padding: 24px;
     display: grid;
-    /*grid-template-columns: repeat(2, 1fr);*/
+    grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
     border: 1px solid var(--neutral-600);
     border-radius: 24px;

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap/dist/gsap";
@@ -33,6 +34,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
+      {/*<Sidebar visible={true}/>*/}
       <Header />
       {children}
       {/*<Footer />*/}

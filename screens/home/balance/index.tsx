@@ -90,7 +90,14 @@ const Balance = () => {
                 </div>
 
             </div>
+            <div className={styles.balance_container}>
+                <div>
+                    <h1 className={cn("label-medium", styles.title)}>
+                        {truncateAddress(userInfo.address)}
+                    </h1>
+                </div>
 
+            </div>
 
         </div>
 
