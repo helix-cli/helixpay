@@ -1,14 +1,15 @@
-.header {
+.sidebar {
+    padding-top: 100px;
+    padding-left: 30px;
+    background: var(--neutral-700);
+    display: flex;
     position: fixed;
-    width: 100%;
-    padding-top: 24px;
-    padding-bottom: 64px;
-    background: linear-gradient(
-        to bottom,
-        rgba(25, 25, 25, 1),
-        rgba(25, 25, 25, 0)
-    );
-    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    min-height: 100vh;
+    color: white;
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -16,7 +17,6 @@
     font-size: 30px;
     line-height: 56px;
     letter-spacing: -0.64px;
-    margin-left: 190px;
     text-align: center;
     -webkit-mask-image: linear-gradient(
             -25deg,
@@ -49,8 +49,9 @@
 
 .nav_links {
     display: flex;
-    align-items: center;
-    gap: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
 }
 
 .nav_link {

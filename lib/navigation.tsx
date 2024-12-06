@@ -1,7 +1,7 @@
 export const navigation = [
     {
         id: "0",
-        title: "Home",
+        title: "Overview",
         icon: "home",
         url: "/",
     },
@@ -22,23 +22,5 @@ export const navigation = [
         title: "Trade",
         icon: "trade",
         url: "/trade",
-    },
-    {
-        id: "4",
-        title: "Neutrade AI",
-        icon: "star-plus",
-        url: "/chat",
-    },
-    {
-        id: "5",
-        title: "Premium",
-        icon: "star",
-        url: "/pricing",
-    },
-    {
-        id: "6",
-        title: "Settings",
-        icon: "settings",
-        url: "/settings",
-    },
+    }
 ];

@@ -34,7 +34,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
-      {/*<Sidebar visible={true}/>*/}
+      <Sidebar visible={true}/>
       <Header />
       {children}
       {/*<Footer />*/}
