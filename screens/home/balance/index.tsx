@@ -5,6 +5,7 @@ import styles from "./balance.module.css";
 import cn from "classnames";
 import {ChevronDown, Share} from "lucide-react";
 import React from "react";
+import {SignMessage} from "@/components/SignMessage";
 
 const userInfo = {
     name: "Mien PV",
@@ -87,12 +88,7 @@ const Balance = () => {
 
             </div>
             <div className={styles.feature_container}>
-                <button
-                    className={cn("button-stroke", styles.btn_remove)}
-                    // onClick={() => setDropdownOpen(!dropdownOpen)}
-                >
-                        Remove wallet
-                </button>
+                <SignMessage/>
                 <button
                     className={cn("button-stroke", styles.btn)}
                     // onClick={() => setDropdownOpen(!dropdownOpen)}
