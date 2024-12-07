@@ -1,6 +1,4 @@
-import ArrowRight from "@/components/Icons/ArrowRight";
-
-"use-client";
+"use client";
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import styles from './buttonconnect.module.css';

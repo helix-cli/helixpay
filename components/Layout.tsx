@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Lenis from "@studio-freight/lenis";
@@ -34,10 +33,9 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
-      <Sidebar visible={true}/>
+      <Sidebar/>
       <Header />
       {children}
-      {/*<Footer />*/}
     </>
   );
 }

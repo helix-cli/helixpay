@@ -3,10 +3,6 @@
 import Image from "next/image";
 import styles from "./dashboard.module.css";
 import cn from "classnames";
-import ArrowRight from "@/components/Icons/ArrowRight";
-import Decorations from "@/components/Decorations";
-import CurrencyFormat from "@/components/CurrencyFormat";
-import Link from "next/link";
 import {ChevronDown, Share, ArrowDown, ArrowUpRight} from "lucide-react";
 import React from "react";
 
@@ -110,7 +106,7 @@ const Dashboard = () => {
                           <td className={styles.transactionAddress}>
                               {transaction.type === "send" ? "To" : "From"}:{" "}
                               {truncateAddress(
-                                  transaction[transaction.type === "send" ? "to" : "from"]
+                                  transaction[transaction.type === "send" ? "to" : "from"] ?? "N/A"
                               )}
                           </td>
                       </tr>

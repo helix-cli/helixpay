@@ -3,10 +3,6 @@
 import Image from "next/image";
 import styles from "./balance.module.css";
 import cn from "classnames";
-import ArrowRight from "@/components/Icons/ArrowRight";
-import Decorations from "@/components/Decorations";
-import CurrencyFormat from "@/components/CurrencyFormat";
-import Link from "next/link";
 import {ChevronDown, Share} from "lucide-react";
 import React from "react";
 
