@@ -7,7 +7,7 @@ import ArrowRight from "@/components/Icons/ArrowRight";
 import Decorations from "@/components/Decorations";
 import CurrencyFormat from "@/components/CurrencyFormat";
 import Link from "next/link";
-import {ChevronDown} from "lucide-react";
+import {ChevronDown, Share} from "lucide-react";
 import React from "react";
 
 const userInfo = {
@@ -90,12 +90,21 @@ const Balance = () => {
                 </div>
 
             </div>
-            <div className={styles.balance_container}>
-                <div>
-                    <h1 className={cn("label-medium", styles.title)}>
-                        {truncateAddress(userInfo.address)}
-                    </h1>
-                </div>
+            <div className={styles.feature_container}>
+                <button
+                    className={cn("button-stroke", styles.btn_remove)}
+                    // onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                        Remove wallet
+                </button>
+                <button
+                    className={cn("button-stroke", styles.btn)}
+                    // onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                        <span>
+                        <Share color={'#f5f5f5'}/>
+                     </span>
+                </button>
 
             </div>
 

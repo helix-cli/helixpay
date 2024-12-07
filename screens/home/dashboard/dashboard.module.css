@@ -1,15 +1,15 @@
 .section {
-    height: 30vh;
+    height: 100vh;
 }
 
 .content {
-    margin-top: 64px;
+    margin-top: 15px;
+    margin-bottom: 64px;
     margin-left: 192px;
     padding: 24px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
-    border: 1px solid var(--neutral-600);
     overflow: hidden;
 }
 
@@ -46,10 +46,28 @@
     overflow: hidden;
 }
 
-.btn {
-    width: 48px;
-    height: 48px;
-    margin-top: 24px;
+.btn_receive {
+    width: 42px;
+    height: 42px;
+    padding: 4px 4px;
+    margin-top: 4px;
+    background: none;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 0 1.5px var(--success-600) inset;
+    color: var(--branding-200);
+}
+
+.btn_send {
+    width: 42px;
+    height: 42px;
+    padding: 4px 4px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    box-shadow: 0 0 0 1.5px var(--cyan-600) inset;
+    color: var(--branding-200);
 }
 
 .btn_remove {
@@ -57,16 +75,36 @@
     margin-top: 24px;
 }
 
-.img {
-    transition: transform 0.3s;
-}
-
 .title span {
     color: var(--branding-200);
 }
 
-.rate span {
+.big_title {
+    color: var(--branding-200);
+    margin-left: 216px;
+}
+
+.history {
+    margin-left: 216px;
+    margin-top: 24px;
+}
+
+.divider {
+    margin-top: 24px;
+    border-bottom: 1px solid var(--neutral-600);
+    margin-left: 216px;
+}
+
+.transaction {
+    flex-direction: row;
+}
+
+.text_receive {
     color: var(--success-500);
+}
+
+.text_send {
+    color: var(--cyan-500);
 }
 
 .title_container {
@@ -78,13 +116,18 @@
     text-align: center;
 }
 
+.transactionTable {
+    margin-left: 216px;
+    gap: 10px;
+}
+
 .subtitle {
     color: var(--neutral-400);
     margin-top: 16px;
 }
 
 .button {
-    margin-top: 24px;
+    margin-top: 16px;
 }
 
 .image_container {
@@ -211,4 +254,56 @@
 
 .toggle_btn {
     display: none;
+}
+
+/* transaction.module.css */
+
+.transactionType {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.transactionType .btn {
+    padding: 4px 4px;
+    background-color: transparent;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transactionType .rate {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.transactionAmount {
+    /*display: flex;*/
+    align-items: center;
+    gap: 12px;
+}
+
+.transactionTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.img {
+    position: relative;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.rowContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
 }

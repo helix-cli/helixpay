@@ -47,7 +47,7 @@
 }
 
 .button-stroke svg {
-    stroke: var(--neutral-900);
+    stroke: var(--branding-200);
 }
 
 .button-stroke:hover,

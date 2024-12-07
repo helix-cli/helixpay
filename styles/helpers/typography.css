@@ -160,6 +160,15 @@
     font-weight: 500;
 }
 
+.label-small-regular {
+    font-family: var(--font-plus-jakarta-sans);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.08px;
+    font-weight: 200;
+    color: var(--gray-600);
+}
+
 .label-x-small {
     font-family: var(--font-plus-jakarta-sans);
     font-size: 12px;
