@@ -4,9 +4,22 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import styles from './buttonconnect.module.css';
 import cn from "classnames";
 import Add from "@/components/Icons/Add";
-import React from "react";
+import React, {useEffect} from "react";
+import { useSignMessage } from 'wagmi'
 
 const ButtonConnect = () => {
+    const { signMessage } = useSignMessage()
+
+    const handleSignMessage = async () => {
+        try {
+            const message = "man utd is the best club all over the world";
+            await signMessage({ message });
+            console.log("Message signed successfully!");
+        } catch (error) {
+            console.error("Error signing message:", error);
+        }
+    };
+
     return (
         <ConnectButton.Custom
         >
@@ -19,8 +32,6 @@ const ButtonConnect = () => {
                   authenticationStatus,
                   mounted,
               }) => {
-                // Note: If your app doesn't use authentication, you
-                // can remove all 'authenticationStatus' checks
                 const ready = mounted && authenticationStatus !== 'loading';
                 const connected =
                     ready &&
@@ -28,6 +39,11 @@ const ButtonConnect = () => {
                     chain &&
                     (!authenticationStatus ||
                         authenticationStatus === 'authenticated');
+                useEffect(() => {
+                    if (connected) {
+                        handleSignMessage();
+                    }
+                }, [connected]);
                 return (
                     <div
                         {...(!ready && {

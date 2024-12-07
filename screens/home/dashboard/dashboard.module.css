@@ -1,5 +1,6 @@
 .section {
     height: 100vh;
+    width: 83vw;
 }
 
 .content {
@@ -11,6 +12,12 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
     overflow: hidden;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: repeat(1, 3fr);
 }
 
 .balance_container {
@@ -49,8 +56,6 @@
 .btn_receive {
     width: 42px;
     height: 42px;
-    padding: 4px 4px;
-    margin-top: 4px;
     background: none;
     border-radius: 50%;
     border: none;
@@ -61,8 +66,6 @@
 .btn_send {
     width: 42px;
     height: 42px;
-    padding: 4px 4px;
-    margin-top: 4px;
     border-radius: 50%;
     background: none;
     border: none;
@@ -89,10 +92,21 @@
     margin-top: 24px;
 }
 
+.original {
+    color: var(--neutral-400);
+}
+
 .divider {
-    margin-top: 24px;
+    margin-top: 32px;
     border-bottom: 1px solid var(--neutral-600);
     margin-left: 216px;
+    width: 100%;
+}
+
+.divider_table {
+    margin-top: 12px;
+    border-bottom: 1px solid var(--neutral-600);
+    width: 100%;
 }
 
 .transaction {
@@ -260,9 +274,11 @@
 
 .transactionType {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+    flex: 2;
     gap: 8px;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .transactionType .btn {
@@ -273,7 +289,6 @@
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .transactionType .rate {
@@ -288,15 +303,10 @@
     gap: 12px;
 }
 
-.transactionTable {
-    width: 100%;
-    border-collapse: collapse;
-}
-
 .img {
     position: relative;
-    height: 42px;
-    width: 42px;
+    height: 36px;
+    width: 36px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -304,6 +314,16 @@
 .rowContainer {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 8px;
-    margin-top: 16px;
+    flex: 3;
+    margin-top: 12px;
+}
+
+.content_3 {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 12px;
+    flex: 1;
 }

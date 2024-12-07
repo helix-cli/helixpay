@@ -88,7 +88,7 @@ const Balance = () => {
 
             </div>
             <div className={styles.feature_container}>
-                <SignMessage/>
+                {/*<SignMessage/>*/}
                 <button
                     className={cn("button-stroke", styles.btn)}
                     // onClick={() => setDropdownOpen(!dropdownOpen)}

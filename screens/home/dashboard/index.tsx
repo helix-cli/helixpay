@@ -42,9 +42,13 @@ const Dashboard = () => {
 
     const convertEthToUsd = (ethAmount: number, ethToUsdRate: number): string => {
         const usdAmount = ethAmount * ethToUsdRate;
+        const isWholeNumber = Number.isInteger(usdAmount);
+
         return new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
+            minimumFractionDigits: isWholeNumber ? 0 : 2,
+            maximumFractionDigits: isWholeNumber ? 0 : 2,
         }).format(usdAmount);
     };
 
@@ -57,21 +61,23 @@ const Dashboard = () => {
           <h1 className={cn("label-small", styles.history)}>
                 December 06, 2024
           </h1>
+          <div className={styles.divider}></div>
+
           <div>
-              <div className={styles.divider}></div>
               <table className={styles.transactionTable}>
                   <tbody>
                   {transactions.map((transaction, index) => (
-                      <tr key={index} >
-                          <td className={styles.transactionType}>
-                              <button
-                                  className={`${transaction.type === 'send' ? styles.btn_send : styles.btn_receive}`}
-                                  // onClick={() => setDropdownOpen(!dropdownOpen)}
-                              >
-                                <span>
+                      <div>
+                      <div key={index} className={styles.table}>
+                          <div className={styles.transactionType}>
+                              <div>
+                                  <button
+                                      className={`${transaction.type === 'send' ? styles.btn_send : styles.btn_receive}`}
+                                      // onClick={() => setDropdownOpen(!dropdownOpen)}
+                                  >
                                     {transaction.type === 'send' ? <ArrowUpRight color={'#0891b2'}/> : <ArrowDown color={'#16a34a'}/>}
-                                </span>
-                              </button>
+                                  </button>
+                              </div>
                               <div>
                                   <h1 className={cn("label-small", styles.text)}>
                                       {transaction.type === "send" ? "Sent" : "Received"}
@@ -81,8 +87,7 @@ const Dashboard = () => {
                                   </h1>
                               </div>
 
-                          </td>
-                          <td>
+                          </div>
                               <div className={styles.rowContainer}>
                                   <div className={styles.img}>
                                       <Image
@@ -102,14 +107,19 @@ const Dashboard = () => {
                                       </h1>
                                   </div>
                               </div>
-                          </td>
-                          <td className={styles.transactionAddress}>
-                              {transaction.type === "send" ? "To" : "From"}:{" "}
+                          <div className={styles.content_3}>
+                              <h1 className={cn("label-small", styles.original)}>
+                                  {transaction.type === "send" ? "To" : "From"}:{" "}
+                              </h1>
+                              <h1 className={cn("label-small", styles.text)}>
                               {truncateAddress(
                                   transaction[transaction.type === "send" ? "to" : "from"] ?? "N/A"
                               )}
-                          </td>
-                      </tr>
+                              </h1>
+                          </div>
+                      </div>
+                      <div className={styles.divider_table}></div>
+                  </div>
                   ))}
                   </tbody>
               </table>
